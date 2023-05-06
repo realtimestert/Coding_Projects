@@ -33,7 +33,7 @@ def app_window():
     #message3 = Text(app, align = "bottom,", text = f"{pop_counted(button1)}")
     
     # ai generated image. Dream by Wombo
-    picture = Picture(app, image = "/the_staff.png")
+    picture = Picture(app, image = "the_staff.png")
     
     # Push the button to change the message
     button1 = PushButton(app, align = "left", text = "Use it", command = change_message)
