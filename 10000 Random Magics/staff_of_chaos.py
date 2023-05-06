@@ -33,7 +33,7 @@ def app_window():
     #message3 = Text(app, align = "bottom,", text = f"{pop_counted(button1)}")
     
     # ai generated image. Dream by Wombo
-    picture = Picture(app, image = "the_staff.png")
+    picture = Picture(app, image = "/the_staff.png")
     
     # Push the button to change the message
     button1 = PushButton(app, align = "left", text = "Use it", command = change_message)
@@ -48,28 +48,28 @@ def app_window():
 
 def random_magic():
     # small function to call a random phrase from a list
-    with open("10000_random.txt") as f:
+    with open("/10000_random.txt") as f:
         words = f.readlines()
         magic = random.choice(words)
     return magic
 
 def random_no_button():
     # small function to make the button text change each time the program is opened
-    with open("no.txt") as f:
+    with open("/no.txt") as f:
         words = f.readlines()
         no = random.choice(words)
     return no
 
 def adjectives():
     # function to grab random adjectives
-    with open("adjectives.txt") as f:
+    with open("/adjectives.txt") as f:
         words = f.readlines()
         adjective = random.choice(words)
     return adjective
 
 def nouns():
     #function to grab random nouns
-    with open("nouns.txt") as f:
+    with open("/nouns.txt") as f:
         words = f.readlines()
         noun = random.choice(words)
     return noun
@@ -79,15 +79,6 @@ def insults():
     #for example, "uncultured swine"
     insult = adjectives() + nouns()
     return insult
-
-# def bacon_bits():
-#     bacon = "yummy bacon"
-#     print(bacon)
-
-# def pop_counted(a):
-#     pop_counted.counter += 1
-#     return a.pop()
-# pop_counted.counter = 0
 
 if __name__ == "__main__":
     main()
